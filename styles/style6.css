@@ -1,0 +1,314 @@
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(../images/fondo.png);
+    text-align: center;
+}
+
+header{
+    background: #a6aec1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'custom-font'; /* Fuente personalizada */
+    font-size: 100px;
+    color: #dfe6e9; /* Nuevo color de texto */
+}
+
+/* Estilo para el ícono de Font Awesome */
+.fa-house-chimney {
+    font-size: 24px; /* Aumenta el tamaño del ícono */
+    margin-right: 10px; /* Añade espacio a la derecha del ícono */
+    color: #7a8596; /* Nuevo color */
+    transition: transform 0.2s ease-in-out; /* Efecto suave al interactuar */
+}
+
+.fa-house-chimney:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Botón del menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #7a8596; /* Nuevo color */
+    cursor: pointer;
+}
+
+/* Menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #a6aec1; /* Nuevo fondo */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #2d3436; /* Nuevo color de texto */
+    display: block;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: #f1d9fa; /* Nuevo color de hover */
+}
+
+/* Contenido principal */
+#main-content {
+    transition: margin-left 0.5s;
+    margin-top: 170px;
+}
+
+.side-menu.active {
+    width: 200px;
+}
+
+#main-content.active {
+    margin-left: 200px;
+}
+
+/* Estilo de texto principal */
+main h1 {
+    font-family: 'custom-font'; /* Fuente personalizada */
+    font-size: 100px;
+    color: #2d3436; /* Nuevo color */
+    text-align: center;
+}
+
+#text1 {
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+}
+
+p{
+    color: #224D73;
+    
+}
+
+h1{
+    color: #224D73;
+}
+
+.int{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+a{
+    text-decoration: none;
+}
+
+#btna{
+    align-items: center;
+    text-align: center;
+}
+
+.btn{
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    width: 220px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin: 10px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.btn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.btn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.retroceso{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.retroceso .spacer {
+    flex-grow: 1;
+}
+
+.box{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.res{
+    color: #fff;
+    padding: 20px;
+    font-family: Consolas;
+    width: 60%;
+    background-color: rgba(5, 7, 12, 0.9);
+    border: 10px solid #a6aec1;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.tab{
+    width: 80%;
+    border:solid white 2px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+}
+
+.enc{
+    border:solid white 2px;
+    padding: 8px;
+    text-align: left;
+}
+
+.zel{
+    border:solid white 2px;
+    padding: 8px;
+    text-align: left;
+}
+
+#text1 .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #7a8596; /* Nuevo color */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavidad en el hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+#text1 .btn:hover {
+    background-color: #7a8596; /* Nuevo color de hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+#text1 .forbiden{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+#text1 .forbiden .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins' sans-serif;
+    font-size: 16px;
+}
+
+/* Botones */
+#b1, #b2 {
+    background-color: #7a8596; /* Nuevo fondo */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    transition: 0.3s;
+}
+
+#b1:hover, #b2:hover {
+    background-color: #7a8596; /* Nuevo hover */
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 60px;
+    }
+    .side-menu.active {
+        width: 120px;
+    }
+    #main-content.active {
+        margin-left: 120px;
+    }
+}

@@ -1,0 +1,457 @@
+body{
+    background-color: #3c3c3c;
+    background-image: url(../imagenes/background.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Hace que la imagen de fondo sea estática */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+
+@font-face {
+    font-family: 'expose';
+    src: url(../fonts/Expose-Regular.otf);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0d0d0d;
+    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del header */
+    position: fixed; /* Fija el header en la parte superior */
+    left: 0;/*Cubre el total del margen izquierdo*/
+    right: 0;/*Cubre el total del margen derecho*/
+    top: 0; /* Mantiene el header en la parte superior */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose';
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos del botón de menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos del menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0d0d0d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#list{
+    margin-top: 170px;
+}
+
+#list a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#list a:hover {
+    background-color: #575757;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#main-content {
+    transition: margin-left 0.5s;
+    margin-top: 170px;
+}
+
+/* Ancho del menú cuando está desplegado */
+.side-menu.active {
+    width: 200px;
+}
+
+/* Mueve el contenido principal cuando el menú está desplegado */
+#main-content.active {
+    margin-left: 200px;
+}
+
+header a {
+    margin-left: auto;
+    text-decoration: none;
+}
+
+/* Estilos generales */
+header a::before {
+    content: url('../imagenes/logo2.png');
+    display: inline-block;
+    width: 150px; /* Tamaño del ícono en pantallas grandes */
+    height: 150px;
+}
+
+main h1{
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose';
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    font-family: 'expose';
+    color: white;
+}
+
+article p{
+    color: white;
+}
+
+#text1 {
+    background-color: rgba(50, 50, 50, 0.5); /* Fondo con opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    max-width: 90%; /* Se ajusta al 90% del ancho disponible */
+    margin: 0 auto; /* Centrado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen dentro del section */
+#text1 img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Redondea la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para la imagen */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+/* Estilos de los enlaces de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los iconos se acomoden en varias filas si es necesario */
+}
+
+.social-links img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    max-width: 250px; /* Ancho máximo */
+    height: auto; /* Mantener las proporciones */
+    border-radius: 50%; /* Redondear la imagen */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+
+.social-links a {
+    display: inline-block;
+    font-size: 2rem; /* Tamaño relativo de los iconos */
+    margin: 10px; /* Espacio entre iconos */
+    color: #fff; /* Color blanco */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #d92323; /* Cambia el color cuando el usuario pase el mouse */
+}
+
+
+/* Estilo para el encabezado */
+#text1 h2 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 3vw; /* El tamaño del texto se ajusta según el ancho de la ventana */
+    color: white;
+}
+
+
+.center {
+    display: block;
+    text-align: center;
+}
+
+
+
+#text2{
+    background-color: rgba(50, 50, 50, 0.5); /* Color negro con 70% de opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    color: white; /* Texto en color blanco para contraste */
+    max-width: 800px; /* Ancho máximo para el recuadro */
+    margin: 0 auto; /* Centrando el recuadro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+}
+
+#b1{
+    background-color: #d92323;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#b1:hover{
+    background-color: #0d0d0d;
+    cursor: pointer;
+}
+
+#b2{
+    background-color: #0d0d0d;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#b2:hover{
+    background-color: #d92323;
+    cursor: pointer;
+}
+
+#form1 {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrando el formulario */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efecto de elevación */
+}
+
+#form1 label {
+    display: block; /* Hacer que los labels ocupen todo el ancho disponible */
+    font-family: 'Arial', sans-serif; /* Fuente estilizada, puedes cambiarla por otra si lo deseas */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto */
+    margin-bottom: 15px; /* Espacio debajo de cada label */
+}
+
+#form1 .ctrl {
+    width: 100%; /* Que los campos de entrada ocupen todo el ancho */
+    padding: 10px; /* Espacio interno en los inputs */
+    margin-bottom: 15px; /* Espacio debajo de cada campo */
+    border-radius: 10px; /* Bordes redondeados en los campos de entrada */
+    border: 1px solid #444; /* Borde gris oscuro */
+    background-color: #1a1a1a; /* Fondo oscuro para los inputs */
+    color: white; /* Texto en blanco */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total del input */
+}
+
+#form1 .ctrl::placeholder {
+    color: #777; /* Color para el texto de los placeholders */
+}
+
+#t2{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#send.formButton {
+    background-color: #d92323; /* Fondo oscuro */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espacio interno */
+    border: 2px solid #444; /* Borde gris oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    font-family: 'Arial', sans-serif; /* Fuente estilizada */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suavizar el cambio de colores */
+    width: 100%; /* Ancho total del botón */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}
+
+#send.formButton:hover {
+    background-color: #0d0d0d; /* Cambiar fondo al pasar el ratón */
+    color: #ddd; /* Cambiar color de texto al pasar el ratón */
+}
+
+/* Estilo para ocultar el section inicialmente */
+.hidden {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.8s ease, opacity 0.8s ease;
+}
+
+/* Estilo para desplegar el section */
+.visible {
+    height: auto;
+    opacity: 1;
+    transition: height 0.8s ease, opacity 0.8s ease;
+}
+
+#gracias{
+    text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    header a::before {
+        content: url('../imagenes/logo3.png');
+        display: inline-block;
+        width: 100px; /* Tamaño más grande para dispositivos móviles */
+        height: 100px;
+    }
+
+    #list{
+        margin-top: 120px;
+    }
+
+    .side-menu.active {
+        width: 120px;
+    }
+
+    #main-content.active {
+        margin-left: 120px;
+    }
+
+    #title{
+        font-size: 60px;
+    }
+    
+    #main-content{
+        margin-top: 120px;
+    }
+
+    #t2{
+        font-size: 60px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+    }
+
+    #text1 h2 {
+        font-size: 8vw; /* Ajuste del tamaño del texto */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos en modo retrato) */
+@media (max-width: 480px) {
+    header a::before {
+        content: url('../imagenes/logo4.png');
+        display: inline-block;
+        width: 80px; /* Tamaño aún más grande para pantallas muy pequeñas */
+        height: 80px;
+    }
+
+    #list{
+        margin-top: 100px;
+    }
+
+    .side-menu.active {
+        width: 100px;
+    }
+
+    #main-content.active {
+        margin-left: 100px;
+    }
+
+    #title{
+        font-size: 50px;
+    }
+
+    #main-content{
+        margin-top: 100px;
+    }
+
+    #t2{
+        font-size: 40px;
+    }
+
+    .social-links a {
+        font-size: 2rem; /* Tamaño más grande para pantallas más grandes */
+    }
+
+    #text1 h2 {
+        font-size: 5vw; /* Ajuste del tamaño del texto */
+    }
+
+}
+
+
+/*estilos de iconos*
+
+/* Estilos generales para los enlaces */
+.social-links a {
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-links a:hover {
+    background-color: #575757;
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para los íconos dentro de los enlaces */
+  .social-links i {
+    color: white;
+    font-size: 30px;
+    transition: 0.3s;
+  }
+  
+  /* Efectos de hover para los íconos */
+  .social-links a:hover i {
+    color: #d92323; /* Cambiar el color del ícono al pasar el ratón */
+  }
+  
+  /* Estilos para los enlaces con color personalizado según la red social */
+  .social-links a.facebook:hover {
+    background-color: #3b5998;
+  }
+  
+  .social-links a.twitter:hover {
+    background-color: #00acee;
+  }
+  
+  .social-links a.instagram:hover {
+    background-color: #c13584;
+  }
+  
+  .social-links a.linkedin:hover {
+    background-color: #0077b5;
+  }
+  
+  .social-links a.github:hover {
+    background-color: #333;
+  }
+  

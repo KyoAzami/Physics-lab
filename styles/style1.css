@@ -1,0 +1,195 @@
+/* Configuración general del body */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f3e8f1; /* Color de fondo de color.css */
+    background-image: url(../imagenes/background.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Hace que la imagen de fondo sea estática */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+
+/* Fuente personalizada */
+@font-face {
+    font-family: 'expose';
+    src: url(../fonts/Expose-Regular.otf); /* Fuente definida en color.css */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #dfc0da; /* Color sólido de color.css */
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose'; /* Fuente personalizada */
+    font-size: 100px;
+    color: #71305a; /* Color de texto de color.css */
+}
+
+/* Estilo para el ícono de Font Awesome */
+.fa-house-chimney {
+    font-size: 24px; /* Aumenta el tamaño del ícono */
+    margin-right: 10px; /* Añade espacio a la derecha del ícono */
+    color: #82406a; /* Asegura que el color sea consistente */
+    transition: transform 0.2s ease-in-out; /* Efecto suave al interactuar */
+}
+
+.fa-house-chimney:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+
+/* Botón del menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #82406a; /* Color de texto de color.css */
+    cursor: pointer;
+}
+
+/* Menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #dfc0da; /* Fondo del menú de color.css */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #71305a; /* Color de texto de los enlaces de color.css */
+    display: block;
+    font-family: 'expose'; /* Fuente personalizada */
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: #c0a9bd; /* Color de hover para enlaces de color.css */
+}
+
+/* Contenido principal */
+#main-content {
+    transition: margin-left 0.5s;
+    margin-top: 170px;
+}
+
+.side-menu.active {
+    width: 200px;
+}
+
+#main-content.active {
+    margin-left: 200px;
+}
+
+/* Estilo de texto principal */
+main h1 {
+    font-family: 'expose'; /* Fuente personalizada */
+    font-size: 100px;
+    color: #71305a; /* Color de encabezados de color.css */
+    text-align: center;
+}
+
+/* Secciones de texto */
+#text1 {
+    background-color: rgba(50, 50, 50, 0.1); /* Fondo oscuro translúcido */
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #d137b7; /* Color de texto adaptado */
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: 'expose'; /* Fuente personalizada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón dentro del contenedor #text1 */
+#text1 .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #d137b7; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    font-family: 'expose'; /* Asegúrate de que esta fuente esté disponible */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavidad en el hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+#text1 .btn:hover {
+    background-color: #0d0d0d; /* Cambia el fondo al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+
+/* Botones */
+#b1, #b2 {
+    background-color: #d92323; /* Fondo del botón de color.css */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'expose'; /* Fuente personalizada */
+    transition: 0.3s;
+}
+
+#b1:hover, #b2:hover {
+    background-color: #0d0d0d; /* Hover de botones de color.css */
+    cursor: pointer;
+}
+
+/* Formularios */
+#form1 {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'expose'; /* Fuente personalizada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form1 label {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 60px;
+    }
+    .side-menu.active {
+        width: 120px;
+    }
+    #main-content.active {
+        margin-left: 120px;
+    }
+}
