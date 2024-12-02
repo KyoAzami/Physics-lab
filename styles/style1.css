@@ -110,7 +110,7 @@ header h1 {
 /* Estilo de texto principal */
 main h1 {
     font-family: 'expose'; /* Fuente personalizada */
-    font-size: 100px;
+    font-size: 5rem;
     color: #71305a; /* Color de encabezados de color.css */
     text-align: center;
 }
@@ -183,13 +183,254 @@ main h1 {
 
 /* Responsividad */
 @media (max-width: 768px) {
+/* Configuración general del body */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-image: url(../imagenes/background.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Hace que la imagen de fondo sea estática */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+
+/* Fuente personalizada */
+@font-face {
+    font-family: 'custom-font';
+    src: url(../fonts/CustomFont-Regular.otf); /* Fuente definida */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'custom-font'; /* Fuente personalizada */
+    font-size: 3rem; /* Tamaño original */
+}
+
+/* Estilo para el ícono de Font Awesome */
+.fa-house-chimney {
+    font-size: 24px; /* Aumenta el tamaño del ícono */
+    margin-right: 10px; /* Añade espacio a la derecha del ícono */
+    transition: transform 0.2s ease-in-out; /* Efecto suave al interactuar */
+}
+
+.fa-house-chimney:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Botón del menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: #1a1f28; /* Color de hover original */
+}
+
+/* Contenido principal */
+#main-content {
+    transition: margin-left 0.5s;
+    margin-top: 150px; /* Margen original */
+}
+
+.side-menu.active {
+    width: 200px;
+}
+
+#main-content.active {
+    margin-left: 200px;
+}
+
+/* Estilo de texto principal */
+main h1 {
+    font-family: 'custom-font'; /* Fuente personalizada */
+    font-size: 3rem; /* Tamaño original */
+    text-align: center;
+}
+
+/* Secciones de texto */
+#text1 {
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#text1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+
+/* Botón dentro del contenedor #text1 */
+#text1 .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavidad en el hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+#text1 .btn:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+#text1 .forbiden {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+#text1 .forbiden .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* Botones */
+#b1, #b2 {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    transition: 0.3s;
+}
+
+#b1:hover, #b2:hover {
+    cursor: pointer;
+}
+
+/* Formularios */
+#form1 {
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form1 label {
+    color: #020c1b; /* Color oscuro original */
+    margin-bottom: 15px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
     header h1 {
-        font-size: 60px;
+        font-size: 2rem; /* Tamaño original */
     }
+
     .side-menu.active {
-        width: 120px;
+        width: 130px;
     }
+
+    main h1 {
+        font-family: 'custom-font'; /* Fuente personalizada */
+        font-size: 3rem; /* Tamaño original */
+        text-align: center;
+    }
+
     #main-content.active {
-        margin-left: 120px;
+        margin-left: 130px;
     }
+
+    #text1 {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    #text1 .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #form1 {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    #b1, #b2 {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #text1 img {
+        max-width: 90%;
+    }
+
+    /* Ajustes para la clase .forbiden */
+    #text1 .forbiden {
+        display: block;
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 100%;
+        flex-direction: column; /* Asegura que los elementos se apilen */
+        align-items: center; /* Centra el contenido */
+        text-align: center; /* Centra el texto */
+    }
+
+    #text1 .forbiden .btn {
+        margin-top: 10px; /* Añade espacio entre los botones */
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
 }
