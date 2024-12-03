@@ -51,6 +51,7 @@ header h1 {
 
 /* Menú lateral */
 .side-menu {
+    text-align: left;
     height: 100%;
     width: 0;
     position: fixed;
@@ -305,7 +306,6 @@ input[type="number"] {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
-        background-size: cover; /* Ajuste para que el fondo se adapte */
     }
 
     header h1 {
@@ -325,9 +325,14 @@ input[type="number"] {
         margin-left: 120px;
     }
 
-    .box, .res {
+    .box{
         width: 90%;
         padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .res {
+        width: 90%;
         font-size: 1rem;
     }
 
