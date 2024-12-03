@@ -98,7 +98,7 @@ header h1 {
 /* Estilo de texto principal */
 main h1 {
     font-family: 'custom-font'; /* Fuente personalizada */
-    font-size: 100px;
+    font-size: 5rem;
     color: #2d3436; /* Nuevo color */
     text-align: center;
 }
@@ -318,6 +318,10 @@ input[type="number"] {
         margin: 10px 0;
     }
 
+    main h1{
+        font-size: 3rem;
+    }
+
     .fa-house-chimney {
         font-size: 20px;
         margin-right: 5px;
@@ -328,24 +332,12 @@ input[type="number"] {
         margin-top: 5px;
     }
 
-    .side-menu {
-        width: 150px;
-    }
-
-    .side-menu ul li a {
-        font-size: 16px;
-    }
-
     .side-menu.active {
-        width: 150px;
+        width: 120px;
     }
-
-    #main-content {
-        margin-top: 140px;
-    }
-
+    
     #main-content.active {
-        margin-left: 150px;
+        margin-left: 120px;
     }
 
     .box, .res {
