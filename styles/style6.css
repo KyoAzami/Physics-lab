@@ -308,11 +308,6 @@ input[type="number"] {
         background-size: cover; /* Ajuste para que el fondo se adapte */
     }
 
-    header {
-        flex-direction: column; /* Ajuste del encabezado para más espacio */
-        align-items: center;
-    }
-
     header h1 {
         font-size: 50px;
         margin: 10px 0;
@@ -320,16 +315,6 @@ input[type="number"] {
 
     main h1{
         font-size: 3rem;
-    }
-
-    .fa-house-chimney {
-        font-size: 20px;
-        margin-right: 5px;
-    }
-
-    #menu-toggle {
-        font-size: 20px;
-        margin-top: 5px;
     }
 
     .side-menu.active {
