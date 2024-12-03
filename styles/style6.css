@@ -368,12 +368,18 @@ input[type="number"] {
     }
 
     #text1 .forbiden {
-        flex-direction: column;
-        gap: 10px;
+        display: block;
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 100%;
+        flex-direction: column; /* Asegura que los elementos se apilen */
+        align-items: center; /* Centra el contenido */
+        text-align: center; /* Centra el texto */
     }
-
+    
     #text1 .forbiden .btn {
-        width: 100%;
-        padding: 12px;
+        margin-top: 10px; /* Añade espacio entre los botones */
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
