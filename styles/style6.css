@@ -218,8 +218,13 @@ input[type="number"] {
     font-family: Consolas;
     width: 60%;
     background-color: rgba(5, 7, 12, 0.9);
-    border: 10px solid #a6aec1;
+    border: 5px solid #a6aec1;
     border-radius: 5px;
+}
+
+.neil{
+    font-size: 4rem;
+    color: white;
 }
 
 .tab{
@@ -324,11 +329,11 @@ input[type="number"] {
     }
     
     .res {
-        width: 100%;
+        width: 60%;
         font-size: 1rem;
     }
 
-    .neil{
+    .nail{
         font-size: 2rem;
     }
 
