@@ -59,7 +59,7 @@
             <br>
 
             <center><div class="res">
-                <p class="nail">Resultado</p>
+                <h3>Resultado</h3>
 
             <?php
                 session_start();
