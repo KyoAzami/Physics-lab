@@ -56,6 +56,8 @@
                 </form>
             </div></center>
 
+            <br>
+
             <center><div class="res">
                 <h3>Resultado:</h3>
 
@@ -101,6 +103,8 @@
                 }
                 ?>
             </div></center>
+
+                <br>
 
             <?php
             if (isset($_GET['btnb'])) {
