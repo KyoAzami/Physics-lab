@@ -53,7 +53,9 @@
 
                 <form action="" method="get">
                     <input type="submit" name="btnb" id="btnb" class="btn" value="Historial de operaciones">
+                    <input type="submit" name="clear" id="clear" class="btn" value="Borrar historial">
                 </form>
+
             </div></center>
 
             <br>
@@ -101,20 +103,14 @@
                         echo "Por favor, introduzca valores adecuados";
                     }
                 }
-                ?>
-            </div></center>
 
-                <br>
-
-            <?php
             if (isset($_GET['btnb'])) {
                 echo "<center><div class=\"res\">";
                 echo "<h3>Historial</h3>";
                 echo "<table class=\"tab\"> <tr> <th class=\"enc\">Op.</th> <th class=\"enc\">Vector a</th> <th class=\"enc\">Vector b</th> <th class=\"enc\">Ángulo externo</th> <th class=\"enc\">Vector resultante</th> <th class=\"enc\">Ángulo resultante</th> </tr>";
 
                 foreach ($_SESSION['history'] as $index => $entry) {
-                    echo "<tr>";
-                    echo "<td class=\"enc\">" . ($index + 1) . "</td>";
+                    echo "<tr>";                        echo "<td class=\"enc\">" . ($index + 1) . "</td>";
                     echo "<td class=\"enc\">" . $entry['a'] . "</td>";
                     echo "<td class=\"enc\">" . $entry['b'] . "</td>";
                     echo "<td class=\"enc\">" . $entry['e'] . "</td>";
@@ -126,7 +122,15 @@
                 echo "</table>";
                 echo "</div></center>";
             }
+
+            if (isset($_GET['clear'])) {
+                $_SESSION['history'] = [];
+                echo "<center><div class=\"res\">";
+                echo "<h3>Historial borrado con éxito.</h3>";
+                echo "</div></center>";
+            }
             ?>
+
 
 
 
