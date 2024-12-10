@@ -91,17 +91,17 @@
                             ];
 
                             $_SESSION['history'][] = $result;
-                            echo "<table class=\"tab\"> <tr> <th class=\"enc\">Datos</th> <th class=\"enc\">Formula</th> <th class=\"enc\">Sustitucion</th> <th class=\"enc\">Resultados</th> </tr>";
+                            echo "<center><table class=\"tab\"> <tr> <th class=\"enc\">Datos</th> <th class=\"enc\">Formula</th> <th class=\"enc\">Sustitucion</th> <th class=\"enc\">Resultados</th> </tr>";
                             echo "<tr>";
-                            echo "<th class=\"enc\">Vector a = $a <br> Vector b = $b <br> Angulo externo = $e</th>";
-                            echo "<th class=\"enc\">√(a^2+b^2-2(a)(b)cos(Angulo interno)) <br> asin(b*sin(e)/vector resultante)<br></th>";
-                            echo "<th class=\"enc\">√($a^2+$b^2-2(a)(b)cos(" . round(rad2deg($aux), 2) . ")) <br> asin($b*sin($e)/" . round($r, 2) . ")<br></th>";
-                            echo "<th class=\"enc\">Vector resutante = " . round($r, 2) . "n <br> Angulo Resultante = " . round(rad2deg($alph), 2) . "°";
+                            echo "<th class=\"enc\">Vector a = $a <br><br> Vector b = $b <br><br> Angulo externo = $e</th>";
+                            echo "<th class=\"enc\">√(a^2+b^2-2(a)(b)cos(Angulo interno)) <br><br> asin(b*sin(e)/vector resultante)<br></th>";
+                            echo "<th class=\"enc\">√($a^2+$b^2-2(a)(b)cos(" . round(rad2deg($aux), 2) . ")) <br><br> asin($b*sin($e)/" . round($r, 2) . ")<br></th>";
+                            echo "<th class=\"enc\">Vector resutante = " . round($r, 2) . "n <br><br> Angulo Resultante = " . round(rad2deg($alph), 2) . "°";
                             /*echo "<br>El desarrollo de la operación para obtener el vector resultante es: <br> √($a^2+$b^2-2($a)($b)cos(" . round(rad2deg($aux), 2) . ")) <br>";
                             echo "<br>El vector resultante tiene el valor en newtons de: " . round($r, 2) . "n <br>";
                             echo "<br><br> El desarrollo de la operación para obtener el ángulo resultante es: <br> asin($b*sin($e)/" . round($r, 2) . ")<br>";
                             echo "<br>El valor del ángulo resultante es de: " . round(rad2deg($alph), 2) . "°";*/
-                            echo "</table>";
+                            echo "</table></center>";
 
                         } else {
                             echo "Error en el cálculo del vector resultante.";
