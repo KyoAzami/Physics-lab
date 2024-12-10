@@ -97,12 +97,14 @@
                             echo "<br><br> El desarrollo de la operación para obtener el ángulo resultante es: <br> asin($b*sin($e)/" . round($r, 2) . ")<br>";
                             echo "<br>El valor del ángulo resultante es de: " . round(rad2deg($alph), 2) . "°";
                         } else {
-                            echo "Error en el cálculo del vector resultante. </div></center>";
+                            echo "Error en el cálculo del vector resultante.";
                         }
                     } else {
-                        echo "Por favor, introduzca valores adecuados </div></center>";
+                        echo "Por favor, introduzca valores adecuados";
                     }
                 }
+
+                echo "</div></center>";
 
             if (isset($_GET['btnb'])) {
                 echo "<center><div class=\"res\">";
@@ -130,8 +132,6 @@
                 echo "</div></center>";
             }
             ?>
-
-            </div></center>
 
 
             <div class="forbiden">
