@@ -131,7 +131,7 @@
             }
             ?>
 
-
+            </div></center>
 
 
             <div class="forbiden">
