@@ -53,7 +53,9 @@
 
                 <form action="" method="get">
                     <input type="submit" name="btnb" id="btnb" class="btn" value="Historial de operaciones">
+                    <input type="submit" name="clear" id="clear" class="btn" value="Borrar historial">
                 </form>
+
             </div></center>
 
             <br>
@@ -89,11 +91,18 @@
                             ];
 
                             $_SESSION['history'][] = $result;
-
-                            echo "<br>El desarrollo de la operación para obtener el vector resultante es: <br> √($a^2+$b^2-2($a)($b)cos(" . round(rad2deg($aux), 2) . ")) <br>";
+                            echo "<center><table class=\"tab\"> <tr> <th class=\"enc\">Datos</th> <th class=\"enc\">Formula</th> <th class=\"enc\">Sustitucion</th> <th class=\"enc\">Resultados</th> </tr>";
+                            echo "<tr>";
+                            echo "<th class=\"enc\">Vector a = $a <br><br> Vector b = $b <br><br> Angulo externo = $e</th>";
+                            echo "<th class=\"enc\">√(a^2+b^2-2(a)(b)cos(Angulo interno)) <br><br> asin(b*sin(e)/vector resultante)<br></th>";
+                            echo "<th class=\"enc\">√($a^2+$b^2-2(a)(b)cos(" . round(rad2deg($aux), 2) . ")) <br><br> asin($b*sin($e)/" . round($r, 2) . ")<br></th>";
+                            echo "<th class=\"enc\">Vector resutante = " . round($r, 2) . "n <br><br> Angulo Resultante = " . round(rad2deg($alph), 2) . "°";
+                            /*echo "<br>El desarrollo de la operación para obtener el vector resultante es: <br> √($a^2+$b^2-2($a)($b)cos(" . round(rad2deg($aux), 2) . ")) <br>";
                             echo "<br>El vector resultante tiene el valor en newtons de: " . round($r, 2) . "n <br>";
                             echo "<br><br> El desarrollo de la operación para obtener el ángulo resultante es: <br> asin($b*sin($e)/" . round($r, 2) . ")<br>";
-                            echo "<br>El valor del ángulo resultante es de: " . round(rad2deg($alph), 2) . "°";
+                            echo "<br>El valor del ángulo resultante es de: " . round(rad2deg($alph), 2) . "°";*/
+                            echo "</table></center>";
+
                         } else {
                             echo "Error en el cálculo del vector resultante.";
                         }
@@ -101,20 +110,16 @@
                         echo "Por favor, introduzca valores adecuados";
                     }
                 }
-                ?>
-            </div></center>
 
-                <br>
+                echo "</div></center> <br>";
 
-            <?php
             if (isset($_GET['btnb'])) {
                 echo "<center><div class=\"res\">";
                 echo "<h3>Historial</h3>";
                 echo "<table class=\"tab\"> <tr> <th class=\"enc\">Op.</th> <th class=\"enc\">Vector a</th> <th class=\"enc\">Vector b</th> <th class=\"enc\">Ángulo externo</th> <th class=\"enc\">Vector resultante</th> <th class=\"enc\">Ángulo resultante</th> </tr>";
 
                 foreach ($_SESSION['history'] as $index => $entry) {
-                    echo "<tr>";
-                    echo "<td class=\"enc\">" . ($index + 1) . "</td>";
+                    echo "<tr>";                        echo "<td class=\"enc\">" . ($index + 1) . "</td>";
                     echo "<td class=\"enc\">" . $entry['a'] . "</td>";
                     echo "<td class=\"enc\">" . $entry['b'] . "</td>";
                     echo "<td class=\"enc\">" . $entry['e'] . "</td>";
@@ -126,8 +131,14 @@
                 echo "</table>";
                 echo "</div></center>";
             }
-            ?>
 
+            if (isset($_GET['clear'])) {
+                $_SESSION['history'] = [];
+                echo "<center><div class=\"res\">";
+                echo "<h3>Historial borrado con éxito.</h3>";
+                echo "</div></center>";
+            }
+            ?>
 
 
             <div class="forbiden">

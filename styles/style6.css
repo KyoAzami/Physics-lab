@@ -234,12 +234,14 @@ input[type="number"] {
     border:solid white 2px;
     padding: 8px;
     text-align: left;
+    width: 100%;
 }
 
 .zel{
     border:solid white 2px;
     padding: 8px;
     text-align: left;
+    width: 100%;
 }
 
 #text1 .btn {
