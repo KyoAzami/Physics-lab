@@ -147,6 +147,11 @@ main h1 {
     transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
 
+#comments{
+    width: 80%;
+    border-radius: 20%;
+}
+
 
 /* Botones */
 #b1, #b2 {
