@@ -143,14 +143,14 @@ main h1 {
 }
 
 #text1 .btn:hover {
-    background-color: #0d0d0d; /* Cambia el fondo al pasar el mouse */
+    background-color: #c0a9bd; /* Cambia el fondo al pasar el mouse */
     transform: scale(1.05); /* Aumenta ligeramente el tamaño */
 }
 
 
 /* Botones */
 #b1, #b2 {
-    background-color: #d92323; /* Fondo del botón de color.css */
+    background-color: #d137b7; /* Fondo del botón de color.css */
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -161,7 +161,7 @@ main h1 {
 }
 
 #b1:hover, #b2:hover {
-    background-color: #0d0d0d; /* Hover de botones de color.css */
+    background-color: #c0a9bd; /* Hover de botones de color.css */
     cursor: pointer;
 }
 
