@@ -148,8 +148,9 @@ main h1 {
 }
 
 #comments{
-    width: 80%;
-    border-radius: 20%;
+    width: 90%;
+    border-radius: 5%;
+    border: none;
 }
 
 
