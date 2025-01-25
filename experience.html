@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Formulario de Experiencia</title>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle">&#9776;</button>
+        <a href="./index.html"><i class="fa-solid fa-house-chimney"></i></a>
+        <h1></h1>
+    </header>
+
+    <nav id="side-menu" class="side-menu">
+        <ul id="list">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./introduccion.html">Introducción</a></li>
+            <li><a href="./teoria.html">Teoría</a></li>
+            <li><a href="./formulas.html">Fórmulas</a></li>
+            <li><a href="./ejemplos.html">Ejemplos</a></li>
+            <li><a href="./php/calculadora.php">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Cuéntanos tu experiencia</h2>
+            <form action="./php/procesa.php" method="POST" id="form1">
+                <fieldset>
+                    <legend>Evaluación de la experiencia</legend>
+
+                    <p>1. ¿Cómo calificarías tu experiencia general con el sitio?</p>
+                    <label><input type="radio" name="experience_general" value="malo" required> Malo</label>
+                    <label><input type="radio" name="experience_general" value="regular"> Regular</label>
+                    <label><input type="radio" name="experience_general" value="bueno"> Bueno</label>
+                    <label><input type="radio" name="experience_general" value="muy_bueno"> Muy bueno</label>
+
+                    <p>2. ¿Cómo calificarías la navegación por el sitio?</p>
+                    <label><input type="radio" name="navigation" value="malo" required> Malo</label>
+                    <label><input type="radio" name="navigation" value="regular"> Regular</label>
+                    <label><input type="radio" name="navigation" value="bueno"> Bueno</label>
+                    <label><input type="radio" name="navigation" value="muy_bueno"> Muy bueno</label>
+
+                    <p>3. ¿Cómo calificarías la calidad del contenido?</p>
+                    <label><input type="radio" name="content_quality" value="malo" required> Malo</label>
+                    <label><input type="radio" name="content_quality" value="regular"> Regular</label>
+                    <label><input type="radio" name="content_quality" value="bueno"> Bueno</label>
+                    <label><input type="radio" name="content_quality" value="muy_bueno"> Muy bueno</label>
+
+                    <p>4. ¿Cómo calificarías la utilidad de la información proporcionada?</p>
+                    <label><input type="radio" name="information_usefulness" value="malo" required> Malo</label>
+                    <label><input type="radio" name="information_usefulness" value="regular"> Regular</label>
+                    <label><input type="radio" name="information_usefulness" value="bueno"> Bueno</label>
+                    <label><input type="radio" name="information_usefulness" value="muy_bueno"> Muy bueno</label>
+
+                    <p>5. ¿Recomendarias esta plataforma con familiares o amigos?</p>
+                    <label><input type="radio" name="information_usefulness" value="malo" required> No</label>
+                    <label><input type="radio" name="information_usefulness" value="regular"> Talvez</label>
+                    <label><input type="radio" name="information_usefulness" value="bueno"> Si</label>
+                    <label><input type="radio" name="information_usefulness" value="muy_bueno"> Definitivamente</label>
+
+                </fieldset>
+
+                <label for="comments">Comentarios adicionales:</label>
+                <textarea name="comments" id="comments" rows="5" placeholder="Escribe tus sugerencias o comentarios aquí..."></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
