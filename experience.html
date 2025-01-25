@@ -25,10 +25,13 @@
         </ul>
     </nav>
 
-    <main>
-        <section>
-            <h2>Cuéntanos tu experiencia</h2>
-            <form action="./php/procesa.php" method="POST" id="form1">
+    <main id="main-content">
+        <section id="text1">
+
+
+            <h1 id="title">Cuéntanos tu experiencia</h1>
+
+            <form action="./php/saved.php" method="post" id="form1">
                 <fieldset>
                     <legend>Evaluación de la experiencia</legend>
 
@@ -64,10 +67,12 @@
 
                 </fieldset>
 
-                <label for="comments">Comentarios adicionales:</label> <br>
-                <textarea name="comments" id="comments" rows="5" placeholder="Escribe tus sugerencias o comentarios aquí..."></textarea>
+                <label for="comments">Comentarios adicionales:</label> <br><br>
+                <center><textarea name="comments" id="comments" rows="5" placeholder="Escribe tus sugerencias o comentarios aquí..."></textarea></center>
 
-                <button type="submit" class="btn">Enviar</button>
+                <br><br><br>
+
+                <center><button type="submit" id="b1" onclick="saveExperience()">Enviar</button></center>
             </form>
         </section>
     </main>
@@ -76,4 +81,6 @@
 
     </footer>
 </body>
+
+<script src="./JavaScript/lateralMenu.js"></script>
 </html>
