@@ -108,7 +108,7 @@
                         }
                     } else {
                         echo "Por favor, introduzca valores adecuados <br> El valor de los vectores debe ser positivo <br> El angulo externo
-                        debe ser mayo a 0° y menor a 180°";
+                        debe ser mayor a 0° y menor a 180°";
                     }
                 }
 
