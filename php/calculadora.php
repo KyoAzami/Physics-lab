@@ -107,7 +107,8 @@
                             echo "Error en el cálculo del vector resultante.";
                         }
                     } else {
-                        echo "Por favor, introduzca valores adecuados";
+                        echo "Por favor, introduzca valores adecuados <br> El valor de los vectores debe ser positivo <br> El angulo externo
+                        debe ser mayo a 0° y menor a 180°";
                     }
                 }
 
