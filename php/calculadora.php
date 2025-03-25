@@ -77,10 +77,10 @@
 
                     if (is_numeric($a) && is_numeric($b) && is_numeric($e) && $a > 0 && $b > 0 && $e > 0 && $e < 180) {
                         $aux = deg2rad(180 - $e);
-                        $r = sqrt((pow($a, 2) + pow($b, 2)) - (2 *($a * $b) * cos($aux)));
+                        $r = sqrt((pow($a, 2) + pow($b, 2)) - (2*($a*$b)*cos($aux)));
 
                         if ($r != 0) {
-                            $alph = asin(($b * sin($aux)) / $r);
+                            $alph = asin(($b*sin($aux)) / $r);
 
                             $result = [
                                 'a' => $a,
@@ -95,7 +95,7 @@
                             echo "<tr>";
                             echo "<th class=\"enc\">Vector a = $a <br><br> Vector b = $b <br><br> Angulo externo = $e</th>";
                             echo "<th class=\"enc\">√(a^2+b^2-2(a)(b)cos(Angulo interno)) <br><br> asin(b*sin(e)/vector resultante)<br></th>";
-                            echo "<th class=\"enc\">√($a^2+$b^2-2(a)(b)cos(" . round(rad2deg($aux), 2) . ")) <br><br> asin($b*sin($e)/" . round($r, 2) . ")<br></th>";
+                            echo "<th class=\"enc\">√($a^2+$b^2-2($a)($b)cos(" . round(rad2deg($aux), 2) . ")) <br><br> asin($b*sin($e)/" . round($r, 2) . ")<br></th>";
                             echo "<th class=\"enc\">Vector resutante = " . round($r, 2) . "n <br><br> Angulo Resultante = " . round(rad2deg($alph), 2) . "°";
                             /*echo "<br>El desarrollo de la operación para obtener el vector resultante es: <br> √($a^2+$b^2-2($a)($b)cos(" . round(rad2deg($aux), 2) . ")) <br>";
                             echo "<br>El vector resultante tiene el valor en newtons de: " . round($r, 2) . "n <br>";
