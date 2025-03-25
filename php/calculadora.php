@@ -77,7 +77,7 @@
 
                     if (is_numeric($a) && is_numeric($b) && is_numeric($e) && $a > 0 && $b > 0 && $e > 0 && $e < 180) {
                         $aux = deg2rad(180 - $e);
-                        $r = sqrt((pow($a,2)+pow($b,2))-2*($a*$b)*cos($aux));
+                        $r = sqrt((pow($a,2)+pow($b,2))-(($a*$b)*2)*cos($aux));
 
                         if ($r != 0) {
                             $alph = asin(($b*sin($aux))/$r);
